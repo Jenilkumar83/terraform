@@ -1,0 +1,47 @@
+Terraform Commands:
+-terraform validate
+-terraform fmt
+-terraform show
+-terraform providers
+-terraform output
+-terraform refresh
+-terraform graph
+
+Mutable vs Immutable Infrastructure:
+-terraform validate
+-Configuration Drift
+
+Lifecycle Rules:
+-create_before_destroy -- Create the resource first and then destroy older
+-prevent_destroy -- Prevents destroy of a resource
+-ignore_changes -- Ignore Changes to Resource Attributes (specific/all)
+
+Data Sources::
+->Resource                                    Data Source
+  Keyword: resource                           Keyword: data
+  Creates, Updates, Destroys Infrastructure   Only Reads Infrastructure
+  Also called Managed Resources               Also called Data Resources
+  
+Meta Arguments::
+-Shell Scripts
+
+Count::
+resource "local_file" "pet" {
+filename = var.filename
+count = 3
+}
+
+Length Function::
+->variable                                     function       value
+  fruits = [ "apple", "banana", "orange"]     length(fruits)    3
+  cars = [ “honda”, “bmw”, “nissan”, “kia”]   length(cars)      4
+  colors = [ “red”, “purple”]                 length(colors)    2
+
+
+->Resource      Resource Updates                     Action
+  pet[0]     /root/pets.txt" -> "/root/dogs.txt"     Destroy and Replace
+  pet[1]     "/root/dogs.txt" -> "/root/cats.txt"    Destroy and Replace
+  pet[2]     Does not Exist                          Destroy
+  
+for_each:
+Version Constraints:

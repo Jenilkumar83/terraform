@@ -1,0 +1,19 @@
+Terraform:
+-Providers
+-HashiCorp Configuration Language(HCL)
+-Declarative
+ 1.Init
+ 2.Plan
+ 3.Apply
+-Resource
+-Terraform State
+-Terraform Import
+-Terraform Cloud and Terraform Enterprise
+
+Installation:
+$ wget https://releases.hashicorp.com/terraform/0.13.0/terraform_0.13.0_linux_amd64.zip
+$ unzip terraform_0.13.0_linux_amd64.zip
+$ mv terraform /usr/local/bin
+$ terraform version
+Terraform v0.13.0
+

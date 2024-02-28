@@ -1,0 +1,52 @@
+IAM::
+->Job Function            Policy Name
+  Administrator           AdministratorAccess
+  Billing                 Billing
+  Database Administrator  DatbaseAdministrator
+  Network Administrator   NetworkAdministrator
+  View-Only User          ViewOnlyAccess
+  
+https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html
+
+
+Programmatic Access:
+$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.0.30.zip" -o "awscliv2.zip"
+$ unzip awscliv2.zip
+$ sudo ./aws/install
+$ aws --version
+
+https://aws.amazon.com/cli/
+$ aws configure
+AWS Access Key ID [None]:
+AWS Secret Access Key [None]:
+Default region name [None]:
+Default output format [None]:
+
+$ cat .aws/config/config
+
+$ cat .aws/config/credentials
+
+$ aws <command> <subcommand> [options and parameters]
+
+ex:
+$ aws iam create-user --user-name lucy
+{
+"User": {
+"UserName": "lucy",
+"Tags": [],
+"CreateDate": "2020-09-15T23:40:11.168Z",
+"UserId": "h9r2sc5br8ss7uzhs2qm",
+"Path": "/",
+"Arn": "arn:aws:iam::000000000000:user/lucy"
+}
+}
+
+
+->Command      Value
+  command      iam
+  subcommand   create-user
+  option       --user-name
+  parameter    lucy
+  
+  
+https://docs.aws.amazon.com/cli/latest/reference

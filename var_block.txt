@@ -1,0 +1,73 @@
+Variable Block:
+->Type       Example
+  string     "/root/pets.txt"
+  number     1
+  bool       true/false
+  any        Default Value
+  list       ["cat", "dog"]
+  map        pet1 = cat 
+             pet2 = dog
+  object     Complex Data Structure
+  tuple      Complex Data Structure
+  
+List::
+->Index  Value
+  0      Mr
+  1      Mrs
+  2      Sir
+
+->var.tf
+variable "prefix" {
+default = ["Mr", "Mrs", "Sir"]
+type = list 0      1      2
+}
+
+
+Map::
+->Key         Value
+  statement1  We love pets!
+  statement2  We love animals!
+  
+->var.tf
+variable file-content {
+type          = map
+default       = {
+   "statement1" = "We love pets!"
+   "statement2" = “We love animals!"
+ }
+}
+
+List of a Type::
+Map of a Type::
+Set::
+
+Objects::
+->Key          Example     Type
+ name          bella       string
+ color         brown       string
+ age           7           number
+ food          ["fish", "chicken", "turkey"] list
+ favorite_pet  true        bool
+ 
+Tuples::
+
+
+
+Variables in terraform:
+-Interactive Mode
+-Command Line Flags
+-Environment Variables
+-Variable Definition Files
+
+Automatically Loaded:: terraform.tfvars | terraform.tfvars.json
+		        *.auto.tfvars | *.auto.tfvars.json
+
+
+Variable Definition Precedence::
+->Order Option
+  1     Environment Variables
+  2     terraform.tfvars
+  3     *.auto.tfvars (alphabetical order)
+  4     -var or –var-file (command-line flags)
+
+

@@ -1,0 +1,45 @@
+Provisioners:
+-Remote Exec
+-Local Exec
+
+Behaviour:
+-Creation Time Provisioner
+-Destroy Time Provisioner
+-Failure Behavior
+
+Consideration with provisioners:
+-Local-Exec | Remote-Exec
+
+->Provider       Resource                   Option
+AWS              aws_instance               user_data
+Azure            azurrerm_virtual_machine   custom_data
+GCP              google_compute_instance    meta_data
+Vmware vSphere   vsphere_virtual_machine    user_data.txt
+
+Taint:
+$ terraform taint aws_instance.webserver
+$ terraform untaint aws_instance.webserver
+
+Debugging:
+-Log Levels
+
+Terraform Import:
+Terraform Modules:
+-Complex Configuration Files
+-Duplicate Code
+-Increased Risk
+-Limits Reusability
+Root Module
+
+Creating and Using a Module:
+-Simpler Configuration Files
+-Lower Risk
+-Re-Usability
+-Standardized Configuration
+
+
+https://registry.terraform.io/browse/modules
+Using Modules from Registry::
+-Local Module
+-Terraform Registry
+https://registry.terraform.io/modules/terraform-aws-modules/security-group/aws/latest/submodules/ssh

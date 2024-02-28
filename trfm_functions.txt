@@ -1,0 +1,18 @@
+Terraform Functions:
+-Numeric Functions
+-String Functions
+-Collection Functions
+-Type Conversion Functions
+-Map Functions
+
+
+Operators & Conditional Expressions:
+-Numeric Operators
+-Equality Operators
+-Comparison Operators
+-Logical Operators
+
+
+Terraform Workspaces:
+$ terraform workspace new ProjectA
+$ terraform workspace list

@@ -1,0 +1,41 @@
+HCL – Declarative Language
+$ mkdir /root/terraform-local-file
+$ cd /root/terraform-local-file
+
+resource "local_file" "pet" {​
+{
+filename = "/root/pets.txt"​
+content = "We love pets!"​
+}
+Here, resource = block name
+      local = provider file resource
+      local_file = resource type
+      pet = resource name
+      filename & content = arguments
+
+
+$ terraform init
+$ terraform plan
+$ terraform apply
+
+
+https://registry.terraform.io/providers/hashicorp/local/latest/docs
+
+Configuration directory:
+->File Name       Purpose
+  main.tf         Main configuration file containing resource definition
+  variables.tf    Contains variable declarations
+  outputs.tf      Contains outputs from resources
+  provider.tf     Contains Provider definition
+  
+Multiple Providers:
+-random provider  arguments are supported: keepers, length, prefix, separator, etc.
+
+Input Variables:
+->Argument    Value
+  filename    "/root/pets.txt"
+  content     "We love pets!"
+  prefix      "Mrs"
+  separator   "."
+  length      "1"
+  

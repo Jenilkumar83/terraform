@@ -1,0 +1,23 @@
+Infrastructure as Code(IaC):
+
+Type of IaC Tools:
+-Configuration Management, ex:ansible,puppet,saltstack,etc.
+-Server Templating, ex:docker,packer,vagrant,etc.
+-Provisioning Tools, ex:terraform,cloudformation,etc.
+
+1.onfiguration Management:
+-Designed to Install and Manage Software
+-Maintains Standard Structure
+-Version Control
+-Idempotent
+
+2.Server Templating:
+-Pre Installed Software and Dependencies
+-Virtual Machine or Docker Images
+-Immutable Infrastructure
+
+3.Provisioning Tools:
+-Deploy Immutable Infrastructure resources
+-Servers, Databases, Network Components etc.
+-Multiple Providers
+

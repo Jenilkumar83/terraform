@@ -1,0 +1,33 @@
+Resource Attribute Reference:
+-id(supported)
+
+Resource Dependencies:
+-Implicit Dependency
+-Explicit Dependency
+
+Output Variables::
+$ terraform output
+->pet-name = Mrs.gibbon
+
+$ terraform output pet-name
+->Mrs.gibbon
+
+
+
+Terraform state:
+-Purpose of State = Tracking Metadata, Performance, Collaboration
+
+Terraform State Considerations:
+-Sensitive Data
+-Terraform State Considerations
+  1.Remote State Backends = amazon s3, terraform cloud
+  2.Version Control = github, bitbucket
+-No Manual Edits
+
+
+Remote state:
+-Mapping Configuration to Real World
+-Tracking Metadata
+-Performance
+-Collaboration
+-State Locking

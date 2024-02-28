@@ -1,0 +1,14 @@
+https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html
+
+-Unique Bucket Name
+-DNS Compliant Name
+-Files size between 0 to 5TB
+
+https://<bucket_name>.<region>.amazonaws.com
+
+DynamoDB::
+-Highly Scalable
+-Fully Managed by AWS
+-NoSQL Database
+-Single-Digit MilliSecond Latency
+-Data Replicated across Regions
